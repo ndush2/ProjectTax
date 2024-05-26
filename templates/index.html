@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidding App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bidding Application</h1>
+    <form method="post">
+        <label for="bid_offer">Enter the bid offer:</label>
+        <input type="text" id="bid_offer" name="bid_offer" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if results %}
+        <h2>Results:</h2>
+        <p>Money earned: {{ results.money_earned }}</p>
+        <p>Money in KES: {{ results.money_kes }}</p>
+    {% endif %}
+</body>
+</html>
+
