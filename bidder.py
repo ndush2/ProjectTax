@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from converter import CurrencyConverter
+import os
 
 class BiddingApp:
     def __init__(self, bid_offer, api_key):
